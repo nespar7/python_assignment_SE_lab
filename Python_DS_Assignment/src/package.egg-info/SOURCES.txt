@@ -1,0 +1,16 @@
+setup.py
+my_package/model.py
+my_package/analysis/__init__.py
+my_package/analysis/visualize.py
+my_package/data/__init__.py
+my_package/data/dataset.py
+my_package/data/transforms/__init__.py
+my_package/data/transforms/blur.py
+my_package/data/transforms/crop.py
+my_package/data/transforms/flip.py
+my_package/data/transforms/rescale.py
+my_package/data/transforms/rotate.py
+package.egg-info/PKG-INFO
+package.egg-info/SOURCES.txt
+package.egg-info/dependency_links.txt
+package.egg-info/top_level.txt
