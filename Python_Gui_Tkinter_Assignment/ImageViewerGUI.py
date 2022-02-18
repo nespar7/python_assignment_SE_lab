@@ -1,6 +1,4 @@
 ####### REQUIRED IMPORTS FROM THE PREVIOUS ASSIGNMENT #######
-from pyparsing import col
-from soupsieve import select
 from my_package.model import InstanceSegmentationModel
 from my_package.data import Dataset
 from my_package.analysis import plot_visualization
@@ -22,8 +20,12 @@ def fileClick(clicked, dataset, segmentor, cwd):
 	global segmented_image, bbox_image
 	
 	# opening the file that the user chooses
-	filename = filedialog.askopenfilename(initialdir=cwd+"/data/imgs", title="select image")
-	index = int(os.path.basename(filename)[0])
+	try:
+		filename = filedialog.askopenfilename(initialdir=cwd+"/data/imgs", title="select image")
+		index = int(os.path.basename(filename)[0])
+	except:
+		print("Canceled file selection")
+		return
 
 	# delete the existing entry and update it to the new file name
 	e.delete(0, END)
@@ -59,16 +61,12 @@ def process(clicked):
 
 	####### CODE REQUIRED (START) #######
 	# if clicked has Segmentation, show the segmented image, else show the bbox image
-	if clicked.get() == "Segmentation":
-		try:
+	try:
+		if clicked.get() == "Segmentation":
 			image = Label(picture_frame, image=segmented_image).grid(row=1, column=0)		
-		except NameError:
-			print("Select an image first")
-
-	else:
-		try:
+		else:	
 			image = Label(picture_frame, image=bbox_image).grid(row=1, column=0)
-		except NameError:
+	except NameError:
 			print("Select an image first")
 	####### CODE REQUIRED (END) #######
 
