@@ -17,3 +17,5 @@ After cloning, do these commands before running the main.py
  
  For making packages refer to : [package tutorial](https://github.com/pypa/sampleproject.git)
  
+ # python_gui_assignment
+For tutorial on tkinter : [tkinter tutorials playlist](http://bit.ly/2UFLKgj)
