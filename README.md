@@ -1,5 +1,5 @@
 # python_assignment_SE_lab
-My SE lab assignment 3
+My SE lab Image Processing Assignment
 
 After cloning, run these commands before running the main.py
 
