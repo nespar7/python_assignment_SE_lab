@@ -3,7 +3,7 @@ My SE lab Image Processing Assignment
 
 After cloning, run these commands before running the main.py
 
- 1. open the python_DS_Assignment folder in terminal
+ 1. open the [a relative link](python_DS_Assignment) folder in terminal
  2. cd src
  3. python3 -m build
  4. cd dist
